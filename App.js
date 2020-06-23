@@ -30,7 +30,7 @@ const App = (props) => {
   return (
     <>
       <View style={styles.root}>
-        <Text>Hello React Native Navigation 👋</Text>
+        <Text>Waiting for update</Text>
         <Button
           title='Push Settings Screen'
           color='#710ce3'
@@ -74,3 +74,5 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+
+

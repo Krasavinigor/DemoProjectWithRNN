@@ -24,11 +24,13 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import CodePush from "react-native-code-push";
+
 const Settings = () => {
   return (
     <>
       <View style={styles.root}>
-        <Text>Settings Screen</Text>
+        <Text>Update isn't installed by CodePush</Text>
       </View>
     </>
   );
@@ -43,4 +45,8 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Settings;
+
+let codePushOptions = { checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME, installMode: CodePush.InstallMode.IMMEDIATE };
+
+
+export default CodePush(codePushOptions)(Settings);
